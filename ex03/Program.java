@@ -42,12 +42,13 @@ public class Program {
 	}
 	
 	private static int getGrade(int counter, int week, long analytics) {
+		int res = 0;
 		while(counter < week - 1) {
 			analytics = analytics / 10;
 			counter++;
 		}
-		
-		return ((int)analytics % 10);
+		res = (int)(analytics % 10);
+		return res;
 	}
 	
 	private static int getMinGrade(Scanner scanner) {
